@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/main..css" type="text/css">
+    <script src="js/index.js" defer type="module"></script>
+    <title>Collision Simulation</title>
+</head>
+<body>
+    <section class="navbar" id ="navbar">
+        <div class="title">Collision Simulation</div>
+        <div class="thing">
+            <form class="particlesNumber">
+            
+                <div class="particlesNumberAmountRange">
+                    <label for="particlesNumberAmountRange">Particles: </label>
+                    <input type="number" id = "particlesNumberBox" class="particlesNumberBox" name="particlesNumberAmountInput" min="1" max="100" value="10" oninput="this.form.particlesNumberAmountRange.value=this.value" />
+                </div>
+                <input type="range" class="particlesNumberSlider" id ="particlesNumberSlider" name="particlesNumberAmountRange" min="1" max="100" value="10" oninput="this.form.particlesNumberAmountInput.value=this.value" />
+            </form>
+            <form class="gravity">
+                <label for="gravity">Gravity</label>
+                <input type="checkbox" class="gravityCheckBox" name="gravity" id="gravity">
+            </form>
+        </div>
+        
+        <div class="thing">
+            <form class="particlesXVel">
+            
+                <div class="particlesXVelAmountRange">
+                    <label for="particlesXVelAmountRange">X-Speed: </label>
+                    <input type="number" id = "particlesXVelBox" class="particlesXVelBox" name="particlesXVelAmountInput" min="-1000" max="1000" value="500" oninput="this.form.particlesXVelAmountRange.value=this.value" />
+                </div>
+                <input type="range" class="particlesNumberSlider" id ="particlesXVelSlider" name="particlesXVelAmountRange" min="-1000" max="1000" value="500" oninput="this.form.particlesXVelAmountInput.value=this.value" />
+            </form>
+            <form class="particlesYVel">
+                <div class="particlesYVelAmountRange">
+                    <label for="particlesYVelAmountRange">Y-Speed: </label>
+                    <input type="number" id = "particlesYVelBox" class="particlesYVelBox" name="particlesYVelAmountInput" min="-1000" max="1000" value="100" oninput="this.form.particlesYVelAmountRange.value=this.value" />
+                </div>
+                <input type="range" class="particlesNumberSlider" id ="particlesYVelSlider" name="particlesYVelAmountRange" min="-1000" max="1000" value="100" oninput="this.form.particlesYVelAmountInput.value=this.value" />
+            </form>
+        </div>
+        
+    </section>
+    <section class="app">
+        <canvas class="canvas" id="canvas"></canvas>
+    </section>
+</body>
+</html>
